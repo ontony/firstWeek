@@ -1,30 +1,25 @@
 
+var appData = {
+    expenses: {
+    },
+    optionalExpenses: {
+    },
+    savings: false,
+    income: [],
+};
 
 var money = prompt('Какой ваш бюджет', '');
 var date = prompt('Введите дату в формате YYYY-MM-DD', '');
 
+appData.timeData = date;
+appData.budget = money;
 
-var appData = {
-    budget: money,
-    timeData: date,
-    expenses: {
-        costOne: '',
-        reasonOne: '',
-    },
-    optionalExpenses: {
-        costTwo: '',
-        reasonTwo: '',
-    }
-
-};
+appData.expenses[prompt('Причина 1', '')] = prompt('Цена 1', '');
+appData.expenses[prompt('Причина 2', '')] = prompt('Цена 2', '');
 
 
-appData.optionalExpenses.costOne = prompt('Цена 1', '');
-appData.optionalExpenses.reasonOne = prompt('Причина 1', '');
-appData.optionalExpenses.costTwo = prompt('Цена 2', '');
-appData.optionalExpenses.reasonTwo = prompt('Причина 2', '');
+var result = (parseInt(appData.budget, 10))/30;
 
-var result = (parseInt(appData.optionalExpenses.costOne, 10) + 
-    parseInt(appData.optionalExpenses.costTwo, 10) + parseInt(appData.budget, 10))/30;
+console.log(appData);
 
 alert('Ваш дневной бюджет = ' + result + 'руб');
