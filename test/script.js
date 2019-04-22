@@ -1,19 +1,3 @@
-var money = +prompt('Какой ваш бюджет', '');
-var date = prompt('Введите дату в формате YYYY-MM-DD', '');
-
-
-var appData = {
-    budget: money,
-    timeData: date,
-    expenses: {
-
-    },
-    optionalExpenses: {
-
-    }
-
-};
-
 
 // WHILE
 // i = 0;
@@ -45,6 +29,23 @@ var appData = {
 //     }}
 //     while (i < 2);
 
+
+
+var money = +prompt('Какой ваш бюджет', '');
+var date = prompt('Введите дату в формате YYYY-MM-DD', '');
+
+
+var appData = {
+    budget: money,
+    timeData: date,
+    expenses: {
+
+    },
+    optionalExpenses: {
+
+    }
+
+};
 
 
 
