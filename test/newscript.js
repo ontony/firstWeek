@@ -68,7 +68,7 @@ var appData = {
         appData.income.sort();
         alert('Вы записали   ' + appData.income.join(';'));
         appData.income.forEach((element, index) => {
-            if (index > 0) console.log('Способы дополнительного заработка ' + element);
+            console.log(`Способы дополнительного заработка ${index +1} ${element}`);
         });
     }
 };
@@ -82,3 +82,6 @@ for (key in appData){
         console.log(`Наша программа включает в себя данные ${key} с значением ${appData[key]}`);
     };
 };
+
+
+
